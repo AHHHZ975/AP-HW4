@@ -15,7 +15,6 @@ ostream& operator<<(ostream& os, Shape& aShape);
 
 class Shape{
 public:
-
 	enum ShapeType{
 		square,
 		circle,
