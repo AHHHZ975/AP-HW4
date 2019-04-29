@@ -7,18 +7,21 @@ using std::endl;
 using std::pair;
 using std::ostream;
 
+
 class Shape;
 ostream& operator<<(ostream& os, Shape& aShape);
 
-enum ShapeType{
-		square = 0,
-		circle = 1,
-		sphere = 2,
-		cube = 3
-};
+
 
 class Shape{
 public:
+
+	enum ShapeType{
+		square,
+		circle,
+		sphere,
+		cube
+	};
 	Shape();
 	~Shape();
 	virtual pair<double, double> getCenter();
@@ -26,15 +29,14 @@ public:
 	virtual double getRadius();
 	virtual double getArea(){};
 	virtual double getVolume(){};
-	ShapeType getEntity();	
+	Shape::ShapeType getEntity();	
 protected:
 	pair<double, double> center;
 	double length;
 	double radius;
 	double area;
 	double volume;
-	ShapeType entity;
-	
+	Shape::ShapeType entity;
 };
 
 

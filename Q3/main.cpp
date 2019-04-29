@@ -1,4 +1,3 @@
-#include <iostream>
 
 #include "circle.h"
 #include "square.h"
@@ -8,9 +7,8 @@
 using std::cout;
 using std::endl;
 
-int main()
-{
-	square sqr( 12, 2, 2 );
+int main(){
+	square sqr(12, 2, 2 );
 	sphere sph( 5, 1.5, 4.5 );
 	cube cub( 2.2 );
 	circle cir( 3.5, 6, 9 );
