@@ -43,7 +43,7 @@ ostream& operator<<(ostream& os, Shape& aShape){
 		os << "volume of " << aShape.getVolume() << endl;
 	}
 	else if(aShape.getEntity() == Shape::ShapeType::cube){
-		os << "Cube side length = " << aShape.getRadius() << endl;
+		os << "Cube side length = " << aShape.getLength() << endl;
 		os << "center->(" << aShape.getCenter().first << ", " << aShape.getCenter().second << ", 0)" << endl;
 		os << "area of " << aShape.getArea() << " & ";
 		os << "volume of " << aShape.getVolume() << endl;

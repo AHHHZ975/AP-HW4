@@ -6,9 +6,8 @@ public:
 	cube();
 	cube(double length);
 	virtual pair<double, double> getCenter();
-	virtual double getLength();
-	virtual double getRadius();
-	virtual double getarea();
+	virtual double getLength();	
+	virtual double getArea();
 	virtual double getVolume();
 	~cube();
 	
