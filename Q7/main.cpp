@@ -11,7 +11,7 @@ using std::list;
 int main(){
 	list<int> aList;
     int a[50];
-    aList.insert(aList.begin(),50, &a);
+    aList.assign(a, a + 50);
     // for(auto i = aList.begin(); itr1 != output.end(); ++itr1){
     //     cout<<" itr "<<(*itr1)<<endl;
     // } 
