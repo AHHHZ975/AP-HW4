@@ -1,6 +1,6 @@
-//#include "Stack.h"
 #include <iostream>
 #include <string>
+
 using std::cout;
 using std::endl;
 using std::cin;
@@ -8,18 +8,16 @@ using std::string;
 
 class CText {
     private:
-        std::string name;
-        std::string course;
+        string name;
+        string course;
         int age;
 
     public:
-        CText(std::string n, std::string c, int a) : name(n), course (c) {
-            //std::cout << "In STUDENT constructor" << std::endl;
+        CText(std::string n, std::string c, int a) : name(n), course (c) {            
             age = a;
         }
 
-        ~CText() {
-            //std::cout << "In STUDENT destructor" << std::endl;
+        ~CText() {            
         }
 
         std::string getName() {

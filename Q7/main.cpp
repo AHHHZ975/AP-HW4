@@ -28,26 +28,24 @@ int main(){
 	cout << endl;
 	//////////////////////////////////////////////////////////	
 	std::generate(b.begin(), b.end(), generateRandomNumber);
- 	cout << "The random generated array is: " << endl;
+ 	cout << "The first random generated array is: " << endl;
   	std::copy(b.begin(), b.end(), out_it);
 	cout << endl;
 	b.sort();
  	b.unique();
-	cout << "The unique random generated array is: " << endl;
+	cout << "The unique first random generated array is: " << endl;
   	std::copy(b.begin(), b.end(), out_it);
 	cout << endl;
 	//////////////////////////////////////////////////////////
 	std::generate(c.begin(), c.end(), generateRandomNumber);
- 	cout << "Another random generated array is: " << endl;
+ 	cout << "The second random generated array is: " << endl;
   	std::copy(c.begin(), c.end(), out_it);
 	cout << endl;
 	c.sort();
  	c.unique();
-	cout << "The unique random generated array is: " << endl;
+	cout << "The unique second random generated array is: " << endl;
   	std::copy(c.begin(), c.end(), out_it);
-	cout << endl;
-	//cout << c^2 - b^2 << endl;
-	//transform(b.begin(), b.end(), b.begin(), sqrt );
+	cout << endl;	
 	transform(b.begin(), b.end(), b.begin(), b.begin(), std::multiplies<int>());
 	transform(c.begin(), c.end(), c.begin(), c.begin(), std::multiplies<int>());
 	if(c.size() < b.size()){
