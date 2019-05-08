@@ -2,6 +2,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <array>
 #include "Stack.h"
 #include "CText.h"
 
@@ -16,8 +17,7 @@ int main(){
 	
 	for(char a{'A'}; a <= 'Z'; a++){
 		stack.push(std::make_shared<string>(base + a));
-	}
-
+	}		
 	//Pop everything out
 	int N{stack.getCount()};
 	if(stack.isEmpty()){
@@ -26,13 +26,12 @@ int main(){
 	}
 
 	for(int i{}; i < N; i++){
-		cout << stack.pop() << endl;
+		cout << *stack.pop() << endl;		
 	}
 
 	if(stack.isEmpty()){
 		cout << "Stack is empty" << endl;
-	}
-
+	}	
 	return 0;
 }
 
