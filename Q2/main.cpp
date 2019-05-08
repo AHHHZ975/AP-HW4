@@ -17,6 +17,7 @@ void getSizeAndCapacityOfvector(vector<dataType>* aVector){
 
 int main(){
 	vector<std::unique_ptr<string>> aVector;	
+	////////////////////////////// Without reserve() function ////////////////////////////////
 	for(size_t i {0}; i != 1000; i++){		
 		aVector.push_back(std::make_unique<string>("Str" + std::to_string(i)));
 		getSizeAndCapacityOfvector(&aVector);
@@ -24,7 +25,7 @@ int main(){
 	for(size_t i {0}; i != aVector.size(); i++){
 		cout << *aVector.at(i) << endl;
 	}
-	//////////////////////////////////////////////////////////////
+	////////////////////////////// With reserve() function ////////////////////////////////
 	aVector.clear();
 	aVector.reserve(1000);
 	for(size_t i {0}; i != 1000; i++){		
